@@ -68,7 +68,11 @@ The first 5 of these sections are found in the top-most dropdown menus in the ro
 
 3.1.06. Now go to System > System > Tab "Impostazioni Generali". Make the following changes.
 
-Hostname:  Scrivi in questo campo il nome del tuo router nel seguente formato: **OPNT-USRN-DVCC-DVCS** – dove **USRN** sta per l'abbreviazione del tuo nickname che hai deciso nello step precedente, **DVCC** sta per il codice del tuo router che hai trovato nello step precedente, e **DVCS** sta per il numero progressivo dei tuoi router dello stesso **DVCC** [ad es **URM2-0001** se è il primo tuo router della serie **URM2**, **URM2-0002** se è il tuo secondo **URM2**, e così via...]. Il mio primo nodo ad esempio si chiama **OPNT-NKSN-URM2-0001**.
+Hostname:  Scrivi in questo campo il nome del tuo router nel seguente formato:
+
+`**OPNT-USRN-DVCC-DVCS**`
+
+dove **USRN** sta per l'abbreviazione del tuo nickname che hai deciso nello step precedente, **DVCC** sta per il codice del tuo router che hai trovato nello step precedente, e **DVCS** sta per il numero progressivo dei tuoi router dello stesso **DVCC** [ad es **URM2-0001** se è il primo tuo router della serie **URM2**, **URM2-0002** se è il tuo secondo **URM2**, e così via...]. Il mio primo nodo ad esempio si chiama **OPNT-NKSN-URM2-0001**.
 
 Timezone: Scegli in questo campo il fuso orario "Europe/Amsterdam" [è il primo che appare premendo il tasto "E" sulla tastiera dopo aver clickato sul menù a tendina]
 
@@ -128,7 +132,7 @@ Return to Network > Interfaces
 Click "Edit" in the LAN section
 IPv4 Address: (Enter the "WLAN IP Address" here)
 Do not change the IPv4 netmask
-DHCP Server: General Settings:​
+DHCP Server: General Settings:
 Start: 10
 Limit: 253
 Leasetime: 1h
@@ -167,7 +171,35 @@ Key: scrivi "Aurora42+" senza virgolette
 Click "Save and Apply."
 Click "Back to Overview"
 
+3.4.00. Nella sezione "Wireless Overview" premi il pulsante "Add" sulla destra:
 
+3.4.01. Nella sezione "Interface Configuration" > "General Setup":
+
+ESSID: Scrivi "openNET.io | USRN-DVCC-DVCS" senza virgolette, sostituendo **USRN-DVCC-DVCS** con i tuoi codici esattamente come nello step 3.1.06.
+Mode: conferma che l'opzione selezionata nel menù a tendina sia "Access Point"
+Network: Seleziona "LAN"
+
+3.4.02. Nella sezione "Interface Configuration" > "Wireless Security":
+
+Encryption: seleziona "WPA2-PSK" dal menù a tendina
+Cipher: seleziona "Force CCMP (AES)"
+Key: scrivi "Aurora42+admin" senza virgolette
+
+Click "Save and Apply."
+Click "Back to Overview"
+
+3.5.00. Nella sezione "Wireless Overview" premi il pulsante "Add" sulla destra:
+
+3.5.01. Nella sezione "Interface Configuration" > "General Setup":
+
+ESSID: Scrivi "openNET.io | 2411-W2PA-OLSR-4SXX" senza virgolette
+Mode: seleziona l'opzione "Ad-Hoc"
+Network: Seleziona "Mesh"
+
+3.5.02. [Configureremo più avanti la crittografia WPA2-PSK CCMP su questa rete da riga di comando.]
+
+Click "Save and Apply."
+Click "Back to Overview"
 
 ----------------
 
