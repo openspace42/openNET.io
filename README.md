@@ -2,7 +2,11 @@
 
 Aprire un nodo è facile! La prima volta ci vorranno almeno 45 minuti se non di più, ma piano piano vedrai che diventerà davvero facile e sarai in grado anche tu di configurare un nuovo nodo in meno di un quarto d'ora. Se hai bisogno di aiuto scrivici a [help@opennet.io](mailto:help@opennet.io)! Vuoi un router già configurato per ogni necessità? Acquistalo da noi visitando il nostro store [opening soon!] o scrivendoci a [store@opennet.io](mailto:store@opennet.io). In ogni caso... benvenuto! :)
 
-### 1. Trova un buon router da acquistare se già non ne hai uno
+### 1A. Trova un buon router da acquistare se già non ne hai uno
+
+[In costruzione]
+
+### 1B. Verifica la compatibilità del tuo router se lo hai già
 
 [In costruzione]
 
@@ -11,6 +15,8 @@ Aprire un nodo è facile! La prima volta ci vorranno almeno 45 minuti se non di 
 [In costruzione]
 
 ### 3. Trasforma il tuo router in un nodo mesh openNET.io
+
+[Hai due router da dedicare al progetto? Ancora meglio! Ripeti la procedura per entrambi i tuoi dispositivi facendo attenzione alle note sotto i vari step dove indichiamo "router 1" e "router 2" [in assenza delle quali va fatto su entrambi] e sarai operativo con tutti i tuoi dispositivi fin da subito! Hai più di due router? Fantastico! Dividili in gruppi di due ciascuno e segui le istruzioni come sopra e posizionali in luoghi fisicamente distinti per ampliare al massimo la copertura dei tuoi nuovi nodi openNET.io!]
 
 Scegli qui il tipo di dispositivo che stai configurando:
 
