@@ -2,6 +2,8 @@
 
 Aprire un nodo è facile! La prima volta ci vorranno almeno 45 minuti se non di più, ma piano piano vedrai che diventerà davvero facile e sarai in grado anche tu di configurare un nuovo nodo in meno di un quarto d'ora. Se hai bisogno di aiuto scrivici a [help@opennet.io](mailto:help@opennet.io)! Vuoi un router già configurato per ogni necessità? Acquistalo da noi visitando il nostro store [opening soon!] o scrivendoci a [store@opennet.io](mailto:store@opennet.io). In ogni caso... benvenuto! :)
 
+Hai due router da dedicare al progetto? Ancora meglio! Ripeti la procedura per entrambi i tuoi dispositivi facendo attenzione alle note sotto i vari step dove indichiamo "router 1" e "router 2" [in assenza delle quali va fatto su entrambi] e sarai operativo con tutti i tuoi dispositivi fin da subito! Hai più di due router? Fantastico! Dividili in gruppi di due ciascuno e segui le istruzioni come sopra e posizionali in luoghi fisicamente distinti per ampliare al massimo la copertura dei tuoi nuovi nodi openNET.io!
+
 ### 1A. Trova un buon router da acquistare se già non ne hai uno
 
 [In costruzione]
@@ -15,8 +17,6 @@ Aprire un nodo è facile! La prima volta ci vorranno almeno 45 minuti se non di 
 [In costruzione]
 
 ### 3. Trasforma il tuo router in un nodo mesh openNET.io
-
-[Hai due router da dedicare al progetto? Ancora meglio! Ripeti la procedura per entrambi i tuoi dispositivi facendo attenzione alle note sotto i vari step dove indichiamo "router 1" e "router 2" [in assenza delle quali va fatto su entrambi] e sarai operativo con tutti i tuoi dispositivi fin da subito! Hai più di due router? Fantastico! Dividili in gruppi di due ciascuno e segui le istruzioni come sopra e posizionali in luoghi fisicamente distinti per ampliare al massimo la copertura dei tuoi nuovi nodi openNET.io!]
 
 Scegli qui il tipo di dispositivo che stai configurando:
 
@@ -55,3 +55,19 @@ Note: These instructions will (probably) work for most Atheros-based routers. Me
 The first 5 of these sections are found in the top-most dropdown menus in the router's interface:
 
 <img src="https://static.wixstatic.com/media/d29986_a728f3094b8a4d73a93917a5e7b8a8e8~mv2.png/v1/fill/w_596,h_400,al_c,lg_1/d29986_a728f3094b8a4d73a93917a5e7b8a8e8~mv2.png" alt="" class="inline"/>
+
+3.1.5. Se ancora non lo hai fatto decidi il tuo nickname da usare all'interno del progetto e abbrevialo in 4 lettere [ad es. Nikksno > NKSN]. Identifica il tuo dispositivo nella [lista dei dispositivi noti](#) per trovare il suo codice di 4 lettere. Se non fosse già listato scrivici a [help@opennet.io](mailto:help@opennet.io) così che possiamo stabilirne uno insieme.
+
+3.1.6. Now go to System > System. Make the following changes.
+
+General Settings Tab:
+
+Hostname:  Scrivi in questo campo il nome del tuo router nel seguente formato: **OPNT-USRN-DVCC-DVCS** – dove **USRN** sta per l'abbreviazione del tuo nickname che hai deciso nello step precedente, **DVCC** sta per il codice del tuo router che hai trovato nello step precedente, e **DVCS** sta per il numero progressivo dei tuoi router dello stesso **DVCC** [ad es **URM2-0001** se è il primo tuo router della serie **URM2**, **URM2-0002** se è il tuo secondo **URM2**, e così via...]. Il mio primo nodo ad esempio si chiama **OPNT-NKSN-URM2-0001**.
+
+Timezone: Scegli in questo campo il fuso orario "Europe/Amsterdam" [è il primo che appare premendo il tasto "E" sulla tastiera dopo aver clickato sul menù a tendina]
+
+Provide NTP server: Checked.
+NTP server candidates: 10.66.6.1
+Logging Tab:
+External system log server: 10.10.220.225 (you can change this to your own syslog server. This is Meta Mesh's)
+Click Save and Apply.
