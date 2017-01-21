@@ -224,6 +224,61 @@ Nel menù a tendina subito a destra seleziona "-- custom --" e digita "10.248.24
 
 3.7.02. Premi "Save and Apply" in basso a destra.
 
+3.8.00. (Section V: Firewall) Now go to Network > Firewall. The goal here is to put each type of Interface into a corresponding zone and then open up all those zones so that they can send traffic to all the other zones and their included Interfaces.
+
+3.8.01. Fai le seguenti modifiche:
+
+General Settings:
+Forward: Accept (If this is not set to Accept, there will be no Internet access through this router)
+WAN section: 
+Input column dropdown: Accept
+Forward column dropdown: Accept
+Click "Save and Apply"
+
+
+<img src="https://static.wixstatic.com/media/d29986_bda720a8d3a242b5a4789b5e8b1ff36e~mv2.png/v1/crop/x_0,y_0,w_1012,h_635/fill/w_1012,h_634,al_c/d29986_bda720a8d3a242b5a4789b5e8b1ff36e~mv2.png" alt="" class="inline"/>
+
+
+Click "Add"
+Name: mesh
+Covered Networks: 
+ethermesh: checked
+mesh: checked
+Interzone Forwardings:
+Check all boxes under "destination" and "source" zones
+Click "Save and Apply"
+Click "Back to Overview"
+
+
+<img src="https://static.wixstatic.com/media/d29986_c22e4541ebc247658307074163f7af5f~mv2.png/v1/fill/w_1051,h_984,al_c/d29986_c22e4541ebc247658307074163f7af5f~mv2.png" alt="" class="inline"/>
+
+
+Click "Edit" in the WAN row.
+Inter-Zone Forwardings: 
+Check all boxes under "destination" and "source" zones
+Click "Save and Apply"
+Click "Back to Overview"
+
+
+<img src="https://static.wixstatic.com/media/d29986_14a20494bbc0431d80968fe72226fa12~mv2.png/v1/fill/w_1052,h_984,al_c/d29986_14a20494bbc0431d80968fe72226fa12~mv2.png" alt="" class="inline"/>
+
+
+Custom Settings Tab:
+Enter the following text verbatim below the lines beginning with a pound sign (or "hashtag" for you millenials). You should probably copy and paste the following instead of typing it:
+ 
+iptables -I FORWARD -i wlan0-1 -d 192.168.0.0/16 -j DROP
+iptables -I FORWARD -i wlan0-1 -d 10.0.0.0/8 -j DROP
+iptables -I FORWARD -i wlan0-1 -d 172.16.0.0/16 -j DROP
+
+Click "Submit"
+Return to the General Settings tab. Your Firewall - Zone Settings should look like:
+
+
+<img src="https://static.wixstatic.com/media/d29986_3d581730d01c40c493ced35ab0dd73e4~mv2.png/v1/fill/w_1052,h_984,al_c/d29986_3d581730d01c40c493ced35ab0dd73e4~mv2.png" alt="" class="inline"/>
+
+
+
+
 ----------------
 
 [ancora in costruzione...]
