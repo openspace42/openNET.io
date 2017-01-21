@@ -70,7 +70,7 @@ The first 5 of these sections are found in the top-most dropdown menus in the ro
 
 Hostname:  Scrivi in questo campo il nome del tuo router nel seguente formato:
 
-`**OPNT-USRN-DVCC-DVCS**`
+**OPNT-USRN-DVCC-DVCS**
 
 dove **USRN** sta per l'abbreviazione del tuo nickname che hai deciso nello step precedente, **DVCC** sta per il codice del tuo router che hai trovato nello step precedente, e **DVCS** sta per il numero progressivo dei tuoi router dello stesso **DVCC** [ad es **URM2-0001** se è il primo tuo router della serie **URM2**, **URM2-0002** se è il tuo secondo **URM2**, e così via...]. Il mio primo nodo ad esempio si chiama **OPNT-NKSN-URM2-0001**.
 
@@ -200,6 +200,29 @@ Network: Seleziona "Mesh"
 
 Click "Save and Apply."
 Click "Back to Overview"
+
+3.6.00. (Section IV: DHCP and DNS) Now go to Network > DHCP and DNS. 
+
+3.6.01. Make the following changes:
+
+DNS Forwardings: scrivi "8.8.8.8" senza virgolette
+Premi l'icona bianca con il "+" verde appena sulla destra della casella di testo. Scrivi "8.8.4.4" senza virgolette nella casella di testo che appare subito sotto la prima.
+
+Click "Save and Apply"
+
+3.7.00. (Section Hostnames) Now go to Network > Hostnames.
+
+3.7.01. Fai le seguenti modifiche:
+
+Nella casella di testo che vedi sulla sinistra digita: "thisnode" senza virgolette.
+Nel menù a tendina subito a destra seleziona "-- custom --" e digita il WLAN IP precedentemente generato nella casella di testo che appare.
+
+In basso a sinistra premi il pulsante "Add"
+
+Nella casella di testo che appare sulla sinistra subito sotto la prima digita: "ck.opennet.io" senza virgolette.
+Nel menù a tendina subito a destra seleziona "-- custom --" e digita "10.248.248.1" senza virgolette.
+
+3.7.02. Premi "Save and Apply" in basso a destra.
 
 ----------------
 
