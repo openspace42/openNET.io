@@ -4,6 +4,8 @@ Aprire un nodo è facile! La prima volta ci vorranno almeno 45 minuti se non di 
 
 Hai due router da dedicare al progetto? Ancora meglio! Ripeti la procedura per entrambi i tuoi dispositivi facendo attenzione alle note sotto i vari step dove indichiamo "router 1" e "router 2" [in assenza delle quali va fatto su entrambi] e sarai operativo con tutti i tuoi dispositivi fin da subito! Hai più di due router? Fantastico! Dividili in gruppi di due ciascuno e segui le istruzioni come sopra e posizionali in luoghi fisicamente distinti per ampliare al massimo la copertura dei tuoi nuovi nodi openNET.io!
 
+Le nostre istruzioni sono frutto di oltre un anno di ricerca nell'ambito delle reti mesh, da sempre ispirata e fondata sull'eccellente lavoro e dei nostri amici di [Commotion wireless](https://commotionwireless.net/), [Meta Mesh](http://www.metamesh.org/) [da cui abbiamo tratto gran parte di questo howto], e [Ninux](http://ninux.org/). Non saremmo mai arrivati dove siamo oggi non fosse stato per loro. Grazie davvero da tutto il team openNET.io!
+
 ### 1A. Trova un buon router da acquistare se già non ne hai uno
 
 [In costruzione]
@@ -89,6 +91,48 @@ Gateway ports: spunta la checkbox
 Genera sul tuo computer una public/private keypair con il comando [unix only] `ssh-keygen -t rsa -b 4096`. Rispondi alla domanda sul path dove salvare le due chiavi generate. Dopo copia la chiave pubblica con `cat /path/to/your-key_id_rsa.pub` e incollala nel campo di testo.
 
 3.1.10. Premi Save and Apply.
+
+3.2.00. (Section II: Interfaces) Now go to Network > Interfaces. Do the Following.
+
+3.2.01. Find the **Bridged Lan** Interface. Copy (meaning highlight it and Ctrl+C) the **MAC Address** of that interface which looks like **E4:95:6E:40:81:51**. Now go to [Meta Mesh's IP Calculator](http://www.pittmesh.net/ipcalc) here and enter the MAC Address and press "Submit." This will automatically calculate three IP addresses for you. Write these down. You'll need them repeatedly throughout the rest of the configuration.
+
+3.2.02. Setting up the Wireless Mesh Interface:
+
+Click "Add new interface"
+Name of the New Interface: mesh
+Cover the following interface: Wireless Network: Master "OpenWRT" (lan)
+Click Submit
+IPv4 Address: (Enter the "Mesh IP Address" here)
+IPv4 Netmask: Custom > enter 255.192.0.0
+Click Save and Apply
+Return to Network > Interfaces
+
+3.2.03. Setting up the Ethermesh Interface:
+
+Click "Add new interface"
+Name of the New Interface: ethermesh
+Cover the following interface: Ethernet Adapter: "eth0" (wan, wan6)
+Click Submit
+IPv4 Address: (Enter the "Ethermesh IP Address" here)
+IPv4 Netmask: Custom > enter 255.192.0.0
+Click Save and Apply
+Return to Network > Interfaces
+
+3.2.04. Setting up the LAN Interface:
+Click "Edit" in the LAN section
+IPv4 Address: (Enter the "WLAN IP Address" here)
+Do not change the IPv4 netmask
+DHCP Server: General Settings:​
+Start: 10
+Limit: 253
+Leasetime: 1h
+Advanced Settings
+Force: Checked
+Click Save and Apply
+
+3.2.05 You will now no longer be able to reach the router at 192.168.1.1. Wait about 10 seconds while your computer gets a new IP address from the router. You should be able to access the router at the new WLAN IP Address (which you, of course, wrote down). Enter that into your broswer and log back in.
+
+<img src="https://static.wixstatic.com/media/d29986_062b018e3efd4efb8f6df1dad8180698~mv2.png/v1/fill/w_1020,h_697,al_c/d29986_062b018e3efd4efb8f6df1dad8180698~mv2.png" alt="" class="inline"/>
 
 ----------------
 
