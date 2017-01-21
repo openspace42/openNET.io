@@ -36,13 +36,17 @@ Note: These instructions will (probably) work for most Atheros-based routers. Me
 
 3.1.01. Se non lo avessi già fatto, apri la pagina di amministrazione di openWRT del tuo router: [http://192.168.1.1](http://192.168.1.1). Se non dovessi vedere la pagina raffigurata nell'immagine qui sotto, apri invece la pagina [http://192.168.1.1/cgi-bin/luci](http://192.168.1.1/cgi-bin/luci).
 
+
 <img src="https://static.wixstatic.com/media/d29986_7f72f1229e9747b583f8567e1b5172db~mv2.png/v1/fill/w_976,h_513,al_c,lg_1/d29986_7f72f1229e9747b583f8567e1b5172db~mv2.png" alt="" class="inline"/>
+
 
 3.1.02. **Non** click "change password now" even though it looks like you're supposed to. Senza inserire alcuna password, clicka semplicemente "login".
 
 3.1.03. Now click "change password now" and set your own password. Mind that you don't hit the enter key to submit the password as it won't save it. You need to click "Save and Apply" at the bottom of the page.
 
+
 <img src="https://static.wixstatic.com/media/d29986_36fa8200deb54270be1f5a20a40fcc74~mv2.png/v1/fill/w_976,h_525,al_c,lg_1/d29986_36fa8200deb54270be1f5a20a40fcc74~mv2.png" alt="" class="inline"/>
+
 
 3.1.04. Log back in. From here on out we will configure 8 general sections. They are:
 
@@ -56,7 +60,9 @@ Note: These instructions will (probably) work for most Atheros-based routers. Me
 
 The first 5 of these sections are found in the top-most dropdown menus in the router's interface:
 
+
 <img src="https://static.wixstatic.com/media/d29986_a728f3094b8a4d73a93917a5e7b8a8e8~mv2.png/v1/fill/w_596,h_400,al_c,lg_1/d29986_a728f3094b8a4d73a93917a5e7b8a8e8~mv2.png" alt="" class="inline"/>
+
 
 3.1.05. Se ancora non lo hai fatto decidi il tuo nickname da usare all'interno del progetto e abbrevialo in 4 lettere [ad es. Nikksno > NKSN]. Identifica il tuo dispositivo nella [lista dei dispositivi noti](#) per trovare il suo codice di 4 lettere. Se non fosse già listato scrivici a [help@opennet.io](mailto:help@opennet.io) così che possiamo stabilirne uno insieme.
 
@@ -130,9 +136,38 @@ Advanced Settings
 Force: Checked
 Click Save and Apply
 
-3.2.05 You will now no longer be able to reach the router at 192.168.1.1. Wait about 10 seconds while your computer gets a new IP address from the router. You should be able to access the router at the new WLAN IP Address (which you, of course, wrote down). Enter that into your broswer and log back in.
+3.2.05. You will now no longer be able to reach the router at 192.168.1.1. Wait about 10 seconds while your computer gets a new IP address from the router. You should be able to access the router at the new WLAN IP Address (which you, of course, wrote down). Enter that into your broswer and log back in.
+
 
 <img src="https://static.wixstatic.com/media/d29986_062b018e3efd4efb8f6df1dad8180698~mv2.png/v1/fill/w_1020,h_697,al_c/d29986_062b018e3efd4efb8f6df1dad8180698~mv2.png" alt="" class="inline"/>
+
+
+3.3.00. (Section III: WiFi) Now go to Network > WiFi. Click the Edit button in the "SSID: OpenWRT" section: Make the following changes.
+
+3.3.01. Setting up the wireless radio and WLAN SSID. Nella sezione "Device Configuration":
+
+Conferma i seguenti valori nella riga "Operating frequency". Correggili nel caso non fossero come segue:
+
+Mode: N
+Channel: 11
+Width: 20 MHz
+
+3.3.02. Nella sezione "Interface Configuration" > "General Setup":
+
+ESSID: Scrivi "openNET.io" senza virgolette
+Mode: conferma che l'opzione selezionata nel menù a tendina sia "Access Point"
+Network: Uncheck "Mesh". Make sure only "LAN" is selected.
+
+3.3.03. Nella sezione "Interface Configuration" > "Wireless Security":
+
+Encryption: seleziona "WPA2-PSK" dal menù a tendina
+Cipher: seleziona "Force CCMP (AES)"
+Key: scrivi "Aurora42+" senza virgolette
+
+Click "Save and Apply."
+Click "Back to Overview"
+
+
 
 ----------------
 
