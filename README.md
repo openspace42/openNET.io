@@ -89,3 +89,7 @@ Gateway ports: spunta la checkbox
 Genera sul tuo computer una public/private keypair con il comando [unix only] `ssh-keygen -t rsa -b 4096`. Rispondi alla domanda sul path dove salvare le due chiavi generate. Dopo copia la chiave pubblica con `cat /path/to/your-key_id_rsa.pub` e incollala nel campo di testo.
 
 3.1.10. Premi Save and Apply.
+
+----------------
+
+[ancora in costruzione...]
