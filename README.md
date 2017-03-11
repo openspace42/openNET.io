@@ -192,7 +192,7 @@ Click "Back to Overview"
 
 3.5.01. Nella sezione "Interface Configuration" > "General Setup":
 
-ESSID: Scrivi "openNET.io | 2411-W2PA-OLSR-4SXX" senza virgolette
+ESSID: Scrivi "openNET.io | 2411-W2PA-OLSR-4GXX" senza virgolette
 Mode: seleziona l'opzione "Ad-Hoc"
 Network: Seleziona "Mesh"
 
