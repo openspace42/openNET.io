@@ -183,7 +183,7 @@ Network: Seleziona "LAN"
 
 Encryption: seleziona "WPA2-PSK" dal menù a tendina
 Cipher: seleziona "Force CCMP (AES)"
-Key: scrivi "Aurora42+admin" senza virgolette
+Key: scrivi "Aurora42+node" senza virgolette
 
 Click "Save and Apply."
 Click "Back to Overview"
