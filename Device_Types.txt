@@ -1,1 +1,12 @@
-4303  Tp-Link WR1043N/ND v03
+4303  Tp-Link       WR1043N/ND        v03
+4304  Tp-Link       WR1043N/ND        v04
+
+8411  Tp-Link       WR841N/ND         v11
+
+C702  Tp-Link       Archer C7         v02
+
+UACP  Ubiquiti      UniFi AC Pro
+UACL  Ubiquiti      UniFi AC Lite
+
+UBM2  Ubiquiti      Bullet M2
+UBR2  Ubiquiti      Rocket M2
